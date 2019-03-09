@@ -10,3 +10,4 @@ class gamePage : AppCompatActivity() {
         setContentView(R.layout.activity_game_page)
     }
 }
+
