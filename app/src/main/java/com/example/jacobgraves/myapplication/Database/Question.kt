@@ -1,4 +1,4 @@
-package com.example.jacobgraves.myapplication.Database
+package com.example.jacobgraves.myapplication
 
 class Question(
     var QType: String,
