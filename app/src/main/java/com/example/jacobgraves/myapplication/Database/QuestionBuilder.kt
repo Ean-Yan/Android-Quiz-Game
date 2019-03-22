@@ -886,8 +886,20 @@ class QuestionBuilder {
                 false
             )
         )
-        public fun getQuestion (String r, int d) {
-
+        public fun getQuestion (r: String,d: Int?): Question? {
+            if(d!=null){
+                return build().distinctBy { question ->
+                    question.wasUsed == false &&
+                    question.QType == r &&
+                    question.QDiff == d
+                }.firstOrNull()
+            }
+            else{
+                return build().distinctBy { question ->
+                    question.wasUsed == false &&
+                    question.QType == r
+                }.firstOrNull() }
+            }
         }
     }
 
