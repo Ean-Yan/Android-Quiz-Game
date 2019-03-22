@@ -1,4 +1,4 @@
-package com.example.jacobgraves.myapplication
+package TeamAndroids.example.TeamAndroids.myapplication.Database
 
 class Question(
     var QType: String,
@@ -8,4 +8,5 @@ class Question(
     var Answer2b: String,
     var Answer3c: String,
     var Answer4d: String,
-    var correct: Int)
+    var correct: Int,
+    var wasUsed: Boolean)
