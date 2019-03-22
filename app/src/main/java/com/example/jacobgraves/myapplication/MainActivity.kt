@@ -8,26 +8,26 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
-import com.example.jacobgraves.myapplication.Database.Question
+//import com.example.jacobgraves.myapplication.Database.Question
 import kotlinx.android.synthetic.main.activity_game_page.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var media : MediaPlayer
     var soundOn = true
-    var questionView: TextView? = null
-    var Score = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val gameOn : Button = findViewById(R.id.PlayButton)
+        val gameOn : Button = findViewById<Button>(R.id.PlayButton)
         gameOn.setOnClickListener {
             startNewGame(true)
         }
 
         //Unsolved Media Switch
-        questionView = findViewById(R.id.QuestionView)
+
+
         media = MediaPlayer.create(this, R.raw.homepage)
         var music = findViewById<Button>(R.id.soundButton) as Button
 //        music.setOnClickListener {
@@ -39,8 +39,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
     private fun startNewGame(clickListener: Boolean){
-        questionView?.text="Question 1"
+
         val toQuestionPage = Intent(this, gamePage :: class.java)
         startActivity(toQuestionPage)
     }

@@ -566,7 +566,7 @@ class QuestionBuilder {
                         "Olympias",
                         "Croton",
                         "Heraea",
-                        4)
+                        4),
                 Question("History",
                         2,
                         "The greeks created and were the first to implement this type of government.",
@@ -614,7 +614,7 @@ class QuestionBuilder {
                         "Egyptians",
                         "Assyrians",
                         "Romans",
-                        3)
+                        3),
                 Question("History",
                         2,
                         "What is the term for a civilization that studied many gods? ",
@@ -649,6 +649,14 @@ class QuestionBuilder {
                         2)
         )
     }
-
-
+        public fun returnRandom(): Question{
+                return Question("Science",
+                        1,
+                        "In what type matter are atoms most tightly packed?",
+                        "Gases",
+                        "Liquids",
+                        "Solids",
+                        "16x",
+                        3)
+        }
 }
