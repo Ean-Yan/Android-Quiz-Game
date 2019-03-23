@@ -1,4 +1,4 @@
-package TeamAndroids.example.TeamAndroids.myapplication.Database
+package com.example.jacobgraves.myapplication.Database
 
 class Question(
     var QType: String,

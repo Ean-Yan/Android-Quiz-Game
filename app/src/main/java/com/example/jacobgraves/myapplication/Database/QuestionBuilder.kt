@@ -1,8 +1,8 @@
-import TeamAndroids.example.TeamAndroids.myapplication.Database.Question
+package com.example.jacobgraves.myapplication.Database
 
 class QuestionBuilder {
 
-    public fun build(): MutableList<Question> {
+    private fun build(): MutableList<Question> {
 
             return mutableListOf<Question>(
                     Question(

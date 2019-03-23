@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jacobgraves.myapplication">
+          package="com.example.jacobgraves.myapplication">
 
     <application
             android:allowBackup="true"
@@ -25,6 +25,10 @@
                 android:resource="@array/preloaded_fonts"/>
 
         <activity android:name=".gamePage">
+        </activity>
+        <activity android:name=".LevelActivity"
+                  android:theme="@style/AppTheme.Pop">
+
         </activity>
     </application>
 
