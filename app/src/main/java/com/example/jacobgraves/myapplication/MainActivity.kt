@@ -1,9 +1,18 @@
-package com.example.jacobgraves.myapplication
+package com.example.jiazhengyan.traviagame
 
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.provider.MediaStore
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Button
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var media : MediaPlayer
+    private var soundOn = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,3 +51,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
