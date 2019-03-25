@@ -1,4 +1,4 @@
-package TeamAndroids.example.TeamAndroids.myapplication.Database
+package com.teamandroids.triviagame.application.Database
 
 class Question(
     var QType: String,

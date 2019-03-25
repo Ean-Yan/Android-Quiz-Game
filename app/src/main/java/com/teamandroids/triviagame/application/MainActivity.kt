@@ -1,4 +1,4 @@
-package com.example.jiazhengyan.traviagame
+package com.teamandroids.triviagame.application
 
 import android.content.Intent
 import android.media.MediaPlayer

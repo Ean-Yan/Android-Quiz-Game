@@ -1,4 +1,4 @@
-package com.example.jacobgraves.myapplication
+package com.teamandroids.triviagame.application
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
