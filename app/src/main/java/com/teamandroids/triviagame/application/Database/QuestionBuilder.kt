@@ -1,4 +1,4 @@
-import com.teamandroids.triviagame.application.Database.Question
+package com.teamandroids.triviagame.application.Database
 
 class QuestionBuilder {
 

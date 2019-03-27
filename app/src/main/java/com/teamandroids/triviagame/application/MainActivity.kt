@@ -9,6 +9,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import kotlinx.android.synthetic.main.content_main.*
+import com.teamandroids.triviagame.application.Database.Question
+import com.teamandroids.triviagame.application.Database.QuestionBuilder
 
 class MainActivity : AppCompatActivity() {
     private lateinit var media : MediaPlayer
