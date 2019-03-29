@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">TriviaGame</string>
+    <string name="action_settings">Settings</string>
+    <string name="trivia_game">Trivia Game</string>
+    <string name="records">Records</string>
+    <string name="random_question">Random Question</string>
+    <string name="achievement">Achievement</string>
+    <string name="settings">Settings</string>
+    <string name="a_describtion">A. Description</string>
+    <string name="b_describtion">B. Description</string>
+    <string name="c_describtion">C. Description</string>
+    <string name="d_describtion">D. Description</string>
+    <string name="question_area">Question area</string>
+    <string name="time_display">Time Display</string>
+    <string name="_00_00">00:00</string>
 </resources>
