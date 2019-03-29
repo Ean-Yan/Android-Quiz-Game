@@ -21,9 +21,6 @@ class MainActivity : AppCompatActivity() {
         gameOn.setOnClickListener {
             var i =  Intent(this, LevelActivity :: class.java)
             startActivity(i)
-
-
-//            startNewGame(true)
         }
 
         //Unsolved Media Switch

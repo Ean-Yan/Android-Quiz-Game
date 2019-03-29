@@ -890,12 +890,11 @@ class QuestionBuilder {
             )
     }
 
-        public fun getQuestion (r: String,d: Int?): Question? {
-            if(d!=null){
+        public fun getQuestion (r: String): Question? {
+            if(r!=null){
                 return build().distinctBy { question ->
                     question.wasUsed == false &&
-                    question.QType == r &&
-                    question.QDiff == d
+                    question.QType == r
                 }.firstOrNull()
             }
             else{

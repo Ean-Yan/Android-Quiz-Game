@@ -1,10 +1,12 @@
 package com.example.jacobgraves.myapplication
 
 import android.app.Activity
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.Gravity
+import android.widget.Button
 
 class LevelActivity : Activity() {
 
@@ -24,6 +26,16 @@ class LevelActivity : Activity() {
         params.gravity = Gravity.CENTER
         params.x = 0
         params.y = -20
+
+        val Science : Button = findViewById<Button>(R.id.ScienceButton)
+            Science.setOnClickListener {
+                var i = Intent (this, gamePage::class.java)
+                startActivity(i)
+            }
+        val Politics : Button = findViewById<Button>(R.id.PoliticsButton)
+        val Sports : Button = findViewById<Button>(R.id.SportsButton)
+        val History : Button = findViewById<Button>(R.id.HistoryButton)
+
 
 
         window.attributes=params
