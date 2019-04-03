@@ -2,7 +2,7 @@ package com.example.jacobgraves.myapplication.Database
 
 class QuestionBuilder {
 
-    private fun build(): MutableList<Question> {
+    public fun build(): MutableList<Question> {
 
             return mutableListOf<Question>(
                     Question(
@@ -890,32 +890,32 @@ class QuestionBuilder {
             )
     }
 
-        public fun getQuestion (r: String): Question? {
+        public fun getQuestion (r: String): Question {
             if(r!=null){
                 return build().distinctBy { question ->
                     question.wasUsed == false &&
                     question.QType == r
-                }.firstOrNull()
+                }.first()
             }
             else{
                 return build().distinctBy { question ->
                     question.wasUsed == false &&
                     question.QType == r
-                }.firstOrNull() }
+                }.first() }
             }
 
 
-        public fun returnRandom(): Question{
-                return Question("Science",
-                        1,
-                        "In what type matter are atoms most tightly packed?",
-                        "Gases",
-                        "Liquids",
-                        "Solids",
-                        "16x",
-                        3,
-                        false)
-        }
+//        public fun returnRandom(): Question{
+//                return Question("Science",
+//                        1,
+//                        "In what type matter are atoms most tightly packed?",
+//                        "Gases",
+//                        "Liquids",
+//                        "Solids",
+//                        "16x",
+//                        3,
+//                        false)
+//        }
 
 
 

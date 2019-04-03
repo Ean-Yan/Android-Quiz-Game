@@ -30,11 +30,30 @@ class LevelActivity : Activity() {
         val Science : Button = findViewById<Button>(R.id.ScienceButton)
             Science.setOnClickListener {
                 var i = Intent (this, gamePage::class.java)
+                i.type="Science"
                 startActivity(i)
+
             }
         val Politics : Button = findViewById<Button>(R.id.PoliticsButton)
+        Science.setOnClickListener {
+            var i = Intent (this, gamePage::class.java)
+            i.type="Politics"
+            startActivity(i)
+
+        }
         val Sports : Button = findViewById<Button>(R.id.SportsButton)
+        Science.setOnClickListener {
+            var i = Intent (this, gamePage::class.java)
+            i.type="Sports"
+            startActivity(i)
+
+        }
         val History : Button = findViewById<Button>(R.id.HistoryButton)
+        Science.setOnClickListener {
+            var i = Intent (this, gamePage::class.java)
+            i.type="History"
+            startActivity(i)
+        }
 
 
 

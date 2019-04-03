@@ -17,7 +17,7 @@
             android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintEnd_toStartOf="@+id/PoliticsButton" android:layout_marginEnd="8dp"
-            app:layout_constraintVertical_bias="0.911"/>
+            app:layout_constraintVertical_bias="0.937" app:layout_constraintHorizontal_bias="0.822"/>
     <Button
             android:text="Politics"
             android:layout_width="150dp"
@@ -25,24 +25,25 @@
             android:id="@+id/PoliticsButton" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/HistoryButton" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="28dp" app:layout_constraintVertical_bias="0.913" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0"/>
+            android:layout_marginEnd="8dp" app:layout_constraintVertical_bias="0.939" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.967"/>
     <Button
             android:text="Sports"
             android:layout_width="150dp"
             android:layout_height="100dp"
             android:id="@+id/SportsButton" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/HistoryButton"
-            android:layout_marginEnd="8dp" android:layout_marginBottom="124dp"
+            android:layout_marginEnd="8dp" android:layout_marginBottom="15dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="1.0"/>
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.784"
+            app:layout_constraintHorizontal_bias="0.825"/>
     <Button
             android:text="History"
             android:layout_width="150dp"
             android:layout_height="100dp"
-            android:id="@+id/HistoryButton" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="28dp"
-            android:layout_marginBottom="124dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/HistoryButton" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginBottom="15dp" app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="1.0"/>
+            app:layout_constraintHorizontal_bias="0.967" app:layout_constraintVertical_bias="0.783"/>
 </android.support.constraint.ConstraintLayout>
