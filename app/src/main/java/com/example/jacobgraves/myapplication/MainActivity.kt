@@ -23,6 +23,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
 
+        val rdm: Button = findViewById(R.id.buttonRandom)
+        rdm.setOnClickListener {
+            var i = Intent(this,gamePage::class.java)
+            startActivity(i)
+        }
+
         //Unsolved Media Switch
 
 
@@ -42,11 +48,6 @@ class MainActivity : AppCompatActivity() {
         val toQuestionPage = Intent(this, gamePage :: class.java)
         startActivity(toQuestionPage)
     }
-
-
-
-
-
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -2,7 +2,6 @@ package com.example.jacobgraves.myapplication
 
 import android.app.Activity
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.Gravity
@@ -27,32 +26,30 @@ class LevelActivity : Activity() {
         params.x = 0
         params.y = -20
 
-        val Science : Button = findViewById<Button>(R.id.ScienceButton)
-            Science.setOnClickListener {
+        val science : Button = findViewById<Button>(R.id.ScienceButton)
+            science.setOnClickListener {
+                var a =  gamePage()
+                a.qtype = "Science"
                 var i = Intent (this, gamePage::class.java)
-                i.type="Science"
                 startActivity(i)
-
             }
-        val Politics : Button = findViewById<Button>(R.id.PoliticsButton)
-        Science.setOnClickListener {
-            var i = Intent (this, gamePage::class.java)
-            i.type="Politics"
-            startActivity(i)
 
+        val politics : Button = findViewById<Button>(R.id.PoliticsButton)
+        politics.setOnClickListener {
+            var a =  gamePage()
+            a.qtype = "History"
+            var j = Intent (this, gamePage::class.java)
+            startActivity(j)
         }
-        val Sports : Button = findViewById<Button>(R.id.SportsButton)
-        Science.setOnClickListener {
-            var i = Intent (this, gamePage::class.java)
-            i.type="Sports"
-            startActivity(i)
-
+        val sports : Button = findViewById<Button>(R.id.SportsButton)
+        sports.setOnClickListener {
+            var k = Intent (this, gamePage::class.java)
+            startActivity(k)
         }
-        val History : Button = findViewById<Button>(R.id.HistoryButton)
-        Science.setOnClickListener {
-            var i = Intent (this, gamePage::class.java)
-            i.type="History"
-            startActivity(i)
+        val history : Button = findViewById<Button>(R.id.HistoryButton)
+        history.setOnClickListener {
+            var l = Intent (this, gamePage::class.java)
+            startActivity(l)
         }
 
 
