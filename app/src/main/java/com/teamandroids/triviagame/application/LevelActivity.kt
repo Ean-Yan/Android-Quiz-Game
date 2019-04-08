@@ -1,10 +1,12 @@
 package com.teamandroids.triviagame.application
 
 import android.app.Activity
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.Gravity
+import android.widget.Button
 
 class LevelActivity : Activity() {
 
@@ -24,6 +26,34 @@ class LevelActivity : Activity() {
         params.gravity = Gravity.CENTER
         params.x = 0
         params.y = -20
+
+        val Science : Button = findViewById<Button>(R.id.ScienceButton)
+            Science.setOnClickListener {
+                var i = Intent (this, gamePage::class.java)
+                i.type="Science"
+                startActivity(i)
+
+            }
+        val Politics : Button = findViewById<Button>(R.id.PoliticsButton)
+            Politics.setOnClickListener {
+            var i = Intent (this, gamePage::class.java)
+            i.type="Politics"
+            startActivity(i)
+
+        }
+        val Sports : Button = findViewById<Button>(R.id.SportsButton)
+            Sports.setOnClickListener {
+            var i = Intent (this, gamePage::class.java)
+            i.type="Sports"
+            startActivity(i)
+        }
+        val History : Button = findViewById<Button>(R.id.HistoryButton)
+            History.setOnClickListener {
+            var i = Intent (this, gamePage::class.java)
+            i.type="History"
+            startActivity(i)
+        }
+
 
 
         window.attributes=params

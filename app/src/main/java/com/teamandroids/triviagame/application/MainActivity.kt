@@ -20,12 +20,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-        val gameOn : Button = findViewById(R.id.PlayButton)
+/*        val gameOn : Button = findViewById(R.id.PlayButton)
         gameOn.setOnClickListener {
             val toQuestionPage = Intent(this, gamePage :: class.java)
             startActivity(toQuestionPage)
+*/
+        val gameOn : Button = findViewById<Button>(R.id.PlayButton)
+        gameOn.setOnClickListener {
+            var i =  Intent(this, LevelActivity::class.java)
+            startActivity(i)
         }
 
         //Unsolved Media Switch
