@@ -10,15 +10,22 @@ class gamePage : AppCompatActivity() {
 
     var qtype = "History"
     private var builder = QuestionBuilder()
-    var list  = builder.getQuestionList(qtype)
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_page)
+
+        if(intent.hasExtra("QuestionType")){
+             qtype = intent.getStringExtra("QuestionType")
+        }
+
         var ans1 = findViewById<Button>(R.id.answer1)
         var ans2 = findViewById<Button>(R.id.answer2)
         var ans3 = findViewById<Button>(R.id.answer3)
         var ans4 = findViewById<Button>(R.id.answer4)
+
+        var list  = builder.getQuestionList(qtype)
 
         var question = list.first()
         QuestionView.text=question.Question
@@ -27,8 +34,7 @@ class gamePage : AppCompatActivity() {
         ans3.text = question.Answer3c
         ans4.text = question.Answer4d
         question.wasUsed=false
+        list.drop(1)
     }
-
-
 }
 

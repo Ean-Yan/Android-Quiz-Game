@@ -9,6 +9,8 @@ import android.widget.Button
 
 class LevelActivity : Activity() {
 
+    var type = "QuestionType"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_level)
@@ -28,27 +30,29 @@ class LevelActivity : Activity() {
 
         val science : Button = findViewById<Button>(R.id.ScienceButton)
             science.setOnClickListener {
-                var a =  gamePage()
-                a.qtype = "Science"
+
                 var i = Intent (this, gamePage::class.java)
+                i.putExtra(type, "Science")
                 startActivity(i)
             }
 
         val politics : Button = findViewById<Button>(R.id.PoliticsButton)
         politics.setOnClickListener {
-            var a =  gamePage()
-            a.qtype = "History"
+
             var j = Intent (this, gamePage::class.java)
+            j.putExtra(type, "Politics")
             startActivity(j)
         }
         val sports : Button = findViewById<Button>(R.id.SportsButton)
         sports.setOnClickListener {
             var k = Intent (this, gamePage::class.java)
+            k.putExtra(type, "Sports")
             startActivity(k)
         }
         val history : Button = findViewById<Button>(R.id.HistoryButton)
         history.setOnClickListener {
             var l = Intent (this, gamePage::class.java)
+            l.putExtra(type, "History")
             startActivity(l)
         }
 
