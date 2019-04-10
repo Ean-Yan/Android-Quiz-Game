@@ -6,7 +6,8 @@ class TypeStrings {
         const val Politics: String = "Politics"
         const val Sports: String = "Sports"
         const val History: String = "History"
-        var Score: Int = 0
+        var highScore: Int = 0
+        var ScoreRecords = arrayOf(0, 0, 0, 0, 0)
     }
 //    public static Science: string = "Science"
 //    public static Politics: string = "Politics"
