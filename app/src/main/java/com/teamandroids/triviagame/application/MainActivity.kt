@@ -31,6 +31,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
 
+        val rdm: Button = findViewById(R.id.buttonRandom)
+        rdm.setOnClickListener {
+            var i = Intent(this,gamePage::class.java)
+            startActivity(i)
+        }
+
         //Unsolved Media Switch
         media = MediaPlayer.create(this, R.raw.homepage)
         val music = findViewById<Button>(R.id.soundButton) as Button

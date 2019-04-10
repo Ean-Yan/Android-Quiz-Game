@@ -1,8 +1,8 @@
-package com.teamandroids.triviagame.application.Database
+package com.example.jacobgraves.myapplication.Database
 
 class QuestionBuilder {
 
-    public fun build(): MutableList<Question> {
+     fun build(): MutableList<Question> {
 
             return mutableListOf<Question>(
                     Question(
@@ -890,33 +890,28 @@ class QuestionBuilder {
             )
     }
 
-        public fun getQuestion (r: String): Question {
-            if(r!=null){
-                return build().distinctBy { question ->
-                    question.wasUsed == false &&
-                    question.QType == r
-                }.first()
+        fun getQuestionList (r: String): List<Question> {
+            if(r=="Science"){
+                return build().filter {
+                    question -> question.QType=="Science" && !question.wasUsed
+                }
+            }else if(r=="History"){
+                return build().filter {
+                        question -> question.QType=="History" && !question.wasUsed
+                }
+            }else if(r=="Politics"){
+                return build().filter {
+                        question -> question.QType=="Politics" && !question.wasUsed
+                }
+            }else{
+                return build().filter {
+                        question -> question.QType=="Sports" && !question.wasUsed
+                }
             }
-            else{
-                return build().distinctBy { question ->
-                    question.wasUsed == false &&
-                    question.QType == r
-                }.first() }
-            }
+        }
 
 
-//        public fun returnRandom(): Question{
-//                return Question("Science",
-//                        1,
-//                        "In what type matter are atoms most tightly packed?",
-//                        "Gases",
-//                        "Liquids",
-//                        "Solids",
-//                        "16x",
-//                        3,
-//                        false)
-//        }
-
-
-
+        fun returnRandom(): Question{
+               return build()[((Math.random()*80).toInt())]
+        }
 }
