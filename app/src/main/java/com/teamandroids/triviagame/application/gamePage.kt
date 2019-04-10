@@ -37,7 +37,6 @@ class gamePage : AppCompatActivity() {
         ans3.text = question.Answer3c
         ans4.text = question.Answer4d
         question.wasUsed=false
-        list.drop(1)
 
         val Answer1a : Button = findViewById<Button>(R.id.Answer1a)
         Answer1a.setOnClickListener {
@@ -46,6 +45,7 @@ class gamePage : AppCompatActivity() {
                 score+=(100*list.get(1).QDiff)
             }
             else{}
+            list.drop(1)
             scoreT.setText(score.toString())
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
@@ -53,7 +53,7 @@ class gamePage : AppCompatActivity() {
 			ans3.text = question.Answer3c
 			ans4.text = question.Answer4d
 			question.wasUsed=false
-			list.drop(1)
+
         }
         val Answer2b : Button = findViewById<Button>(R.id.Answer2b)
         Answer2b.setOnClickListener {
@@ -61,8 +61,8 @@ class gamePage : AppCompatActivity() {
             if (choice==list.get(1).correct){//correct answer code goes here
                 score+=(100*list.get(1).QDiff)
             }
-			
             else{}
+            list.drop(1)
             scoreT.setText(score.toString())
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
@@ -70,7 +70,6 @@ class gamePage : AppCompatActivity() {
 			ans3.text = question.Answer3c
 			ans4.text = question.Answer4d
 			question.wasUsed=false
-			list.drop(1)
         }
         val Answer3c : Button = findViewById<Button>(R.id.Answer3c)
         Answer3c.setOnClickListener {
@@ -79,6 +78,7 @@ class gamePage : AppCompatActivity() {
                 score+=(100*list.get(1).QDiff)
             }
             else{}
+            list.drop(1)
             scoreT.setText(score.toString())
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
@@ -86,7 +86,6 @@ class gamePage : AppCompatActivity() {
 			ans3.text = question.Answer3c
 			ans4.text = question.Answer4d
 			question.wasUsed=false
-			list.drop(1)
         }
         val Answer4d : Button = findViewById<Button>(R.id.Answer4d)
         Answer4d.setOnClickListener {
@@ -95,6 +94,7 @@ class gamePage : AppCompatActivity() {
                 score+=(100*list.get(1).QDiff)
             }
             else{}
+            list.drop(1)
             scoreT.setText(score.toString())
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
@@ -102,7 +102,6 @@ class gamePage : AppCompatActivity() {
 			ans3.text = question.Answer3c
 			ans4.text = question.Answer4d
 			question.wasUsed=false
-			list.drop(1)
         }
 
     }

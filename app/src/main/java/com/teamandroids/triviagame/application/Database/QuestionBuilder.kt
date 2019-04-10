@@ -1,4 +1,5 @@
-package com.example.jacobgraves.myapplication.Database
+package com.teamandroids.triviagame.application.Database
+
 
 class QuestionBuilder {
 

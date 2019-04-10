@@ -1,4 +1,4 @@
-package com.example.jacobgraves.myapplication
+package com.teamandroids.triviagame.application
 
 import android.app.Activity
 import android.content.Intent
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.Gravity
 import android.widget.Button
+import com.teamandroids.triviagame.application.gamePage
 
 class LevelActivity : Activity() {
 
@@ -30,31 +31,30 @@ class LevelActivity : Activity() {
 
         val science : Button = findViewById<Button>(R.id.ScienceButton)
             science.setOnClickListener {
-
                 var i = Intent (this, gamePage::class.java)
                 i.putExtra(type, "Science")
                 startActivity(i)
             }
 
         val politics : Button = findViewById<Button>(R.id.PoliticsButton)
-        politics.setOnClickListener {
+            politics.setOnClickListener {
 
-            var j = Intent (this, gamePage::class.java)
-            j.putExtra(type, "Politics")
-            startActivity(j)
-        }
+                var i = Intent (this, gamePage::class.java)
+                i.putExtra(type, "Politics")
+                startActivity(i)
+            }
         val sports : Button = findViewById<Button>(R.id.SportsButton)
-        sports.setOnClickListener {
-            var k = Intent (this, gamePage::class.java)
-            k.putExtra(type, "Sports")
-            startActivity(k)
-        }
+            sports.setOnClickListener {
+                var i = Intent (this, gamePage::class.java)
+                i.putExtra(type, "Sports")
+                startActivity(i)
+            }
         val history : Button = findViewById<Button>(R.id.HistoryButton)
-        history.setOnClickListener {
-            var l = Intent (this, gamePage::class.java)
-            l.putExtra(type, "History")
-            startActivity(l)
-        }
+            history.setOnClickListener {
+                var i = Intent (this, gamePage::class.java)
+                i.putExtra(type, "History")
+                startActivity(i)
+            }
 
 
 
