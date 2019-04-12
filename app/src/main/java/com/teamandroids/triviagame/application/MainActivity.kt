@@ -3,14 +3,10 @@ package com.teamandroids.triviagame.application
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.provider.MediaStore
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
-import kotlinx.android.synthetic.main.content_main.*
-import com.teamandroids.triviagame.application.Database.Question
-import com.teamandroids.triviagame.application.Database.QuestionBuilder
 
 class MainActivity : AppCompatActivity() {
     private lateinit var media : MediaPlayer
@@ -34,6 +30,12 @@ class MainActivity : AppCompatActivity() {
         val rdm: Button = findViewById(R.id.buttonRandom)
         rdm.setOnClickListener {
             var i = Intent(this,gamePage::class.java)
+            startActivity(i)
+        }
+
+        val settings : Button = findViewById(R.id.Settings)
+        settings.setOnClickListener {
+            var i = Intent(this, SettingsPage::class.java)
             startActivity(i)
         }
 

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@drawable/bcgnd"
+                                             tools:showIn="@layout/activity_settings_page"
+                                             tools:context=".SettingsPage">
+
+    <Button
+            android:id="@+id/muteMusic"
+            android:layout_width="50dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="188dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/mute"
+            app:layout_constraintEnd_toEndOf="@+id/muteSounds"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/musicSlider"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/Music"
+            android:layout_width="74dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Music"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/Sounds"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sounds" />
+
+    <SeekBar
+            android:id="@+id/musicSlider"
+            android:layout_width="216dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/muteSounds"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintStart_toEndOf="@+id/Music"
+            app:layout_constraintTop_toBottomOf="@+id/soundsSlider" />
+
+    <TextView
+            android:id="@+id/Sounds"
+            android:layout_width="88dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="121dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Sounds"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+            android:id="@+id/soundsSlider"
+            android:layout_width="216dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="128dp"
+            android:background="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/Sounds"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Home"
+            app:layout_constraintEnd_toEndOf="@+id/resume"
+            app:layout_constraintTop_toBottomOf="@+id/resume" />
+
+    <Button
+            android:id="@+id/resume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Resume"
+            app:layout_constraintEnd_toEndOf="@+id/achievements"
+            app:layout_constraintTop_toBottomOf="@+id/achievements" />
+
+    <Button
+            android:id="@+id/achievements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="68dp"
+            android:text="Achievements"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/musicSlider" />
+
+    <Button
+            android:id="@+id/muteSounds"
+            android:layout_width="50dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="128dp"
+            android:background="@drawable/mute"
+            app:layout_constraintStart_toEndOf="@+id/soundsSlider"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="33dp" />
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="107dp" />
+
+</android.support.constraint.ConstraintLayout>
