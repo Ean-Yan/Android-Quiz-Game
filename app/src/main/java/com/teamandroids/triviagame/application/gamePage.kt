@@ -1,5 +1,6 @@
 package com.teamandroids.triviagame.application
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -30,7 +31,8 @@ class gamePage : AppCompatActivity() {
         var score=0
         var list  = builder.getQuestionList(qtype)
 
-        var question = list.first()
+        var i=1
+        var question = list.get(i)
         QuestionView.text=question.Question
         ans1.text = question.Answer1a
         ans2.text = question.Answer2b
@@ -41,11 +43,18 @@ class gamePage : AppCompatActivity() {
         val Answer1a : Button = findViewById<Button>(R.id.Answer1a)
         Answer1a.setOnClickListener {
             choice=1
-            if (choice==list.get(1).correct){//correct answer code goes here
-                score+=(100*list.get(1).QDiff)
+            if (choice==question.correct){//correct answer code goes here
+                score+=(100*question.QDiff)
             }
             else{}
-            list.drop(1)
+            if(i!=20) {
+                i++
+            }
+            else{
+                var t =  Intent(this, MainActivity::class.java)
+                startActivity(t)
+            }
+            question = list.get(i)
             scoreT.setText(score.toString())
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
@@ -58,11 +67,18 @@ class gamePage : AppCompatActivity() {
         val Answer2b : Button = findViewById<Button>(R.id.Answer2b)
         Answer2b.setOnClickListener {
             choice=2
-            if (choice==list.get(1).correct){//correct answer code goes here
-                score+=(100*list.get(1).QDiff)
+            if (choice==question.correct){//correct answer code goes here
+                score+=(100*question.QDiff)
             }
             else{}
-            list.drop(1)
+            if(i!=20) {
+                i++
+            }
+            else{
+                var t =  Intent(this, MainActivity::class.java)
+                startActivity(t)
+            }
+            question = list.get(i)
             scoreT.setText(score.toString())
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
@@ -74,11 +90,18 @@ class gamePage : AppCompatActivity() {
         val Answer3c : Button = findViewById<Button>(R.id.Answer3c)
         Answer3c.setOnClickListener {
             choice=3
-            if (choice==list.get(1).correct){//correct answer code goes here
-                score+=(100*list.get(1).QDiff)
+            if (choice==question.correct){//correct answer code goes here
+                score+=(100*question.QDiff)
             }
             else{}
-            list.drop(1)
+            if(i!=20) {
+                i++
+            }
+            else{
+                var t =  Intent(this, MainActivity::class.java)
+                startActivity(t)
+            }
+            question = list.get(i)
             scoreT.setText(score.toString())
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
@@ -90,11 +113,18 @@ class gamePage : AppCompatActivity() {
         val Answer4d : Button = findViewById<Button>(R.id.Answer4d)
         Answer4d.setOnClickListener {
             choice=4
-            if (choice==list.get(1).correct){//correct answer code goes here
-                score+=(100*list.get(1).QDiff)
+            if (choice==question.correct){//correct answer code goes here
+                score+=(100*question.QDiff)
             }
             else{}
-            list.drop(1)
+            if(i!=20) {
+                i++
+            }
+            else{
+                var t =  Intent(this, MainActivity::class.java)
+                startActivity(t)
+            }
+            question = list.get(i)
             scoreT.setText(score.toString())
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
