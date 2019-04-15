@@ -38,6 +38,7 @@ class gamePage : AppCompatActivity() {
         var list  = builder.getQuestionList(qtype)
 
         var i=0
+        var qNum=1
         var question = list.get(i)
         QuestionView.text=question.Question
         ans1.text = question.Answer1a
@@ -57,6 +58,7 @@ class gamePage : AppCompatActivity() {
 
             if(i<19) {//if the question haven't reach the end
                 i++
+                qNum++
             }else{
                 var j =  Intent(this, EndPage::class.java)
                 j.putExtra(passScore,score.toString())
@@ -65,7 +67,7 @@ class gamePage : AppCompatActivity() {
             }
             question = list.get(i)
             scoreT.text = title + score.toString()
-            qCounter.text = title2+i.toString()
+            qCounter.text = title2+qNum.toString()
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
 			ans2.text = question.Answer2b
@@ -83,6 +85,7 @@ class gamePage : AppCompatActivity() {
             else{}
             if(i<19) {
                 i++
+                qNum++
             }
             else{
                 var t =  Intent(this, EndPage::class.java)
@@ -91,7 +94,7 @@ class gamePage : AppCompatActivity() {
             }
             question = list.get(i)
             scoreT.text = title + score.toString()
-            qCounter.text = title2+i.toString()
+            qCounter.text = title2+qNum.toString()
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
 			ans2.text = question.Answer2b
@@ -108,6 +111,7 @@ class gamePage : AppCompatActivity() {
             else{}
             if(i<19) {
                 i++
+                qNum++
             }
             else{
                 var t =  Intent(this, EndPage::class.java)
@@ -116,7 +120,7 @@ class gamePage : AppCompatActivity() {
             }
             question = list.get(i)
             scoreT.text = title + score.toString()
-            qCounter.text = title2+i.toString()
+            qCounter.text = title2+qNum.toString()
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
 			ans2.text = question.Answer2b
@@ -133,6 +137,7 @@ class gamePage : AppCompatActivity() {
             else{}
             if(i<19) {
                 i++
+                qNum++
             }
             else{
                 var t =  Intent(this, EndPage::class.java)
@@ -141,7 +146,7 @@ class gamePage : AppCompatActivity() {
             }
             question = list.get(i)
             scoreT.text = title + score.toString()
-            qCounter.text = title2+i.toString()
+            qCounter.text = title2+qNum.toString()
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
 			ans2.text = question.Answer2b
