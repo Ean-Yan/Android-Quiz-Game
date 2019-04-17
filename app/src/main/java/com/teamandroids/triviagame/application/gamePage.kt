@@ -56,7 +56,7 @@ class gamePage : AppCompatActivity() {
 
             }
 
-            if(i<19) {//if the question haven't reach the end
+            if(i<19) {//if the questions haven't reach the end
                 i++
                 qNum++
             }else{
@@ -83,7 +83,7 @@ class gamePage : AppCompatActivity() {
                 score+=(100*question.QDiff)
             }
             else{}
-            if(i<19) {
+            if(i<19) { //if the questions haven't reach the end
                 i++
                 qNum++
             }
@@ -109,7 +109,7 @@ class gamePage : AppCompatActivity() {
                 score+=(100*question.QDiff)
             }
             else{}
-            if(i<19) {
+            if(i<19) { //if the questions haven't reach the end
                 i++
                 qNum++
             }
@@ -135,7 +135,7 @@ class gamePage : AppCompatActivity() {
                 score+=(100*question.QDiff)
             }
             else{}
-            if(i<19) {
+            if(i<19) { //if the questions haven't reach the end
                 i++
                 qNum++
             }
@@ -145,7 +145,7 @@ class gamePage : AppCompatActivity() {
                 startActivity(t)
             }
             question = list.get(i)
-            scoreT.text = title + score.toString()
+            scoreT.text = title + score.toString()//
             qCounter.text = title2+qNum.toString()
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
