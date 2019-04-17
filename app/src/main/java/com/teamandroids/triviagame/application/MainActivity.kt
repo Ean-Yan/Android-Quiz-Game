@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
         val rdm: Button = findViewById(R.id.buttonRandom)
         rdm.setOnClickListener {
-            var i = Intent(this,gamePage::class.java)
+            var i = Intent(this, gamePage::class.java)
             startActivity(i)
         }
         val settings : Button = findViewById(R.id.Settings)
@@ -37,12 +37,17 @@ class MainActivity : AppCompatActivity() {
             var i = Intent(this, SettingsPage::class.java)
             startActivity(i)
         }
-        val highScore : Button = findViewById<Button>(R.id.buttonRecord)
-//        highScore.setOnClickListener {
-//            var i = Intent(this, SettingsPage::class.java)
-//            i.putExtra(highestScore, highestScore)
-//            startActivity(i)
-//        }
+        val records : Button = findViewById<Button>(R.id.buttonRecord)
+        records.setOnClickListener {
+            var i = Intent(this, RecordsPage::class.java)
+            startActivity(i)
+        }
+
+        val achievements : Button = findViewById<Button>(R.id.buttonAchievements)
+        achievements.setOnClickListener {
+            var i = Intent(this, Achievements::class.java)
+            startActivity(i)
+        }
 
         //Unsolved Media Switch
 //        media = MediaPlayer.create(this, R.raw.homepage)

@@ -22,6 +22,9 @@
         <activity android:name=".LevelActivity"/>
         <activity android:name=".gamePage"/>
         <activity android:name=".SettingsPage"/>
+        <activity android:name=".RecordsPage"/>
+        <activity android:name=".Achievements"/>
+
     </application>
 
 </manifest>

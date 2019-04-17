@@ -58,7 +58,7 @@
         android:text="@string/achievement"
         android:layout_width="150dp"
         android:layout_height="125dp"
-        android:id="@+id/Achievements" app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/buttonAchievements" app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.963"
