@@ -5,7 +5,7 @@ class QuestionBuilder {
 
      fun build(): MutableList<Question> {
 
-            return mutableListOf<Question>(
+            return mutableListOf<Question>( //The questions themselves
                     Question(
                             "Science",
                             1,
@@ -53,7 +53,7 @@ class QuestionBuilder {
                     Question(
                             "Science",
                             2,
-                            "What illness accounted for 40 percent of U. S. military casualties?",
+                            "What illness accounted for 40 percent of U. S. military casualties during World War I? ",
                             "Influenza",
                             "Syphilis",
                             "Smallpox",
@@ -91,7 +91,7 @@ class QuestionBuilder {
                             "California",
                             "Alaska",
                             "Washington",
-                            3,
+                            2,
                             false
                     ),
                     Question(
@@ -114,7 +114,19 @@ class QuestionBuilder {
                             "1791",
                             "1942",
                             1,
-                            false),
+                            false
+                    ),
+                    Question(
+                            "Science",
+                            1,
+                            "In what type matter are atoms most tightly packed?",
+                            "Gases",
+                            "Liquids",
+                            "Solids",
+                            "16x",
+                            3,
+                            false
+                    ),
                     Question(
                             "Science",
                             1,
@@ -123,7 +135,7 @@ class QuestionBuilder {
                             "Cold land",
                             "Warm Water",
                             "Cold Water",
-                            3,
+                            2,
                             false
                     ),
                     Question(
@@ -140,7 +152,7 @@ class QuestionBuilder {
                     Question(
                             "Science",
                             2,
-                            "The San Andreas Fault is what type of plate boundary?",
+                            "The San Andreas Fault is an example of what type of plate boundary?",
                             "Transform",
                             "Divergent",
                             "Fluid",
@@ -178,7 +190,7 @@ class QuestionBuilder {
                             "8",
                             "10",
                             "12",
-                            2,
+                            3,
                             false
                     ),
                     Question(
@@ -189,7 +201,7 @@ class QuestionBuilder {
                             "Salt",
                             "Wood",
                             "Diamond",
-                            3,
+                            2,
                             false
                     ),
                     Question(
@@ -217,7 +229,7 @@ class QuestionBuilder {
                     Question(
                             "Politics",
                             1,
-                            "What was renamed in protest of France’s opposition to the Iraq war?",
+                            "What items were renamed in the US House of Representatives’ cafeteria in protest of France’s opposition to the Iraq war in 2003?",
                             "French Fries",
                             "French Toast",
                             "Both",
@@ -244,7 +256,7 @@ class QuestionBuilder {
                             "Pat Buchanan",
                             "Thomas Jefferson",
                             "William Mckinley",
-                            1,
+                            3,
                             false
                     ),
                     Question(
@@ -283,7 +295,7 @@ class QuestionBuilder {
                     Question(
                             "Politics",
                             3,
-                            "What Queen of Spain sponsored Christopher Columbus’ voyage?",
+                            "What Queen of Spain sponsored Christopher Columbus’ voyage that discovered America?",
                             "Joan I",
                             "Dona Maria II",
                             "Rosalinde I",
@@ -332,7 +344,7 @@ class QuestionBuilder {
                             "Otto Von Bismarck",
                             "Adolf Hitler",
                             "Helmut Schmidt",
-                            2,
+                            3,
                             false
                     ),
                     Question(
@@ -349,7 +361,7 @@ class QuestionBuilder {
                     Question(
                             "Politics",
                             3,
-                            "Who was the first US  president to be born a us Citizen?",
+                            "Who was the first US  president to be born a us Citizen? (Hard)\n",
                             "John Quincy Adams",
                             "William Harrison",
                             "Andrew Jackson",
@@ -415,23 +427,12 @@ class QuestionBuilder {
                     Question(
                             "Politics",
                             1,
-                            "What is the max number of terms a US President may serve?",
+                            "What is the max number of terms a US President may currently serve?",
                             "1",
                             "2",
                             "3",
                             "4",
                             2,
-                            false
-                    ),
-                    Question(
-                            "Politics",
-                            1,
-                            "Who is the current Prime Minister of the U.K?",
-                            "Donald Trump",
-                            "Mr Bean",
-                            "Theresa May",
-                            "David Cameron",
-                            3,
                             false
                     ),
                     Question(
@@ -767,7 +768,7 @@ class QuestionBuilder {
                     Question(
                             "History",
                             3,
-                            "Women is Sparta could not participate in the Olympics, so what was the name of their games?",
+                            "Women is Sparta could not participate in the Olympics, so they had their own special athletic games. What is the name of these games?",
                             "Astylos",
                             "Olympias",
                             "Croton",
@@ -783,6 +784,17 @@ class QuestionBuilder {
                             "Hiearchy",
                             "Democracy",
                             "Oligarchy",
+                            3,
+                            false
+                    ),
+                    Question(
+                            "History",
+                            2,
+                            "Who created a code of morals for the Chinese?",
+                            "Kubai Khan",
+                            "Qin Shi Huang",
+                            "Confucius",
+                            "Sun Yat-sen",
                             3,
                             false
                     ),
@@ -866,7 +878,7 @@ class QuestionBuilder {
                     Question(
                             "History",
                             1,
-                            "Who was an Italian scientist who challenged the Catholic church by supporting the heliocentric theory?",
+                            "Who was an Italian scientist who challenged the Catholic church by supporting the heliocentric theory and was called before the Inquisition?",
                             "Agostino Gemelli",
                             "Galileo Galilei",
                             "Evangelista Torricelli",
@@ -879,7 +891,7 @@ class QuestionBuilder {
             )
     }
 
-        fun getQuestionList (r: String): List<Question> {
+        fun getQuestionList (r: String): List<Question> { //get questions based on input received
             if(r=="Science"){
                 return build().filter {
                     question -> question.QType=="Science" && !question.wasUsed
@@ -900,7 +912,7 @@ class QuestionBuilder {
         }
 
 
-        fun returnRandom(): Question{
+        fun returnRandom(): Question{ //Get questions randomly
                return build()[((Math.random()*80).toInt())]
         }
 }
