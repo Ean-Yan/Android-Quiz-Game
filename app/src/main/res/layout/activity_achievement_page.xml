@@ -12,7 +12,7 @@ tools:context=".gamePage">
 
 
 <TextView
-        android:text="Highest Score:"
+        android:text="Highest Score"
         android:layout_width="330dp"
         android:layout_height="90dp"
         android:id="@+id/timeView" android:background="@color/colorPrimary"
@@ -27,7 +27,7 @@ tools:context=".gamePage">
 />
 
 <TextView
-        android:text="Correct answer in a row"
+        android:text="Correct answer total"
         android:layout_width="330dp"
         android:layout_height="105dp"
         android:id="@+id/AchievementsView" android:background="@color/colorPrimary"

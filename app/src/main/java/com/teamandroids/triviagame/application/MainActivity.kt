@@ -9,6 +9,10 @@ import android.view.MenuItem
 import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
+
+    private var score = "0"
+    private var ifPassRecords = 0
+    private var ifPassAchievements = 0
     private lateinit var media : MediaPlayer
     private var highestScore = "highest"
     private var soundOn = true
@@ -19,6 +23,12 @@ class MainActivity : AppCompatActivity() {
 
         if(intent.hasExtra("0")){
             highestScore = intent.getStringExtra("0")
+        }
+
+        if(intent.hasExtra("EndToMain")){       /* if passed by EndPage  */
+            score = intent.getStringExtra("EndToMain")
+            ifPassRecords = 1
+            ifPassAchievements = 1
         }
 
         //Button initialization
@@ -40,12 +50,22 @@ class MainActivity : AppCompatActivity() {
         val records : Button = findViewById<Button>(R.id.buttonRecord)
         records.setOnClickListener {
             var i = Intent(this, RecordsPage::class.java)
+
+            if(ifPassRecords==1){
+                i.putExtra("MainToRecords", score)      /* pass score to Records */
+            }
+
             startActivity(i)
         }
 
         val achievements : Button = findViewById<Button>(R.id.buttonAchievements)
         achievements.setOnClickListener {
             var i = Intent(this, Achievements::class.java)
+
+            if(ifPassAchievements==1){
+                i.putExtra("MainToAchievements", score)      /* pass score to Achievements */
+            }
+
             startActivity(i)
         }
 

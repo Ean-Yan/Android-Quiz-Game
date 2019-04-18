@@ -19,7 +19,9 @@ class gamePage : AppCompatActivity() {
     private var passScore = "pass" //Pass score to EndPage intent
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_game_page)
 
         //Get question type from levelActivity
@@ -59,15 +61,15 @@ class gamePage : AppCompatActivity() {
             if(i<19) {//if the questions haven't reach the end
                 i++
                 qNum++
-            }else{
+            }else{    // if done, navigate to EndPage
                 var j =  Intent(this, EndPage::class.java)
                 j.putExtra(passScore,score.toString())
-                j.putExtra(qtype, qtype)
+                //j.putExtra(qtype, qtype)
                 startActivity(j)
             }
             question = list.get(i)
             scoreT.text = title + score.toString()
-            qCounter.text = title2+qNum.toString()
+            qCounter.text = title2 + qNum.toString()
 			QuestionView.text=question.Question
 			ans1.text = question.Answer1a
 			ans2.text = question.Answer2b
@@ -87,7 +89,7 @@ class gamePage : AppCompatActivity() {
                 i++
                 qNum++
             }
-            else{
+            else{       // if done, navigate to EndPage
                 var t =  Intent(this, EndPage::class.java)
                 t.putExtra(passScore,score.toString())
                 startActivity(t)
@@ -113,7 +115,7 @@ class gamePage : AppCompatActivity() {
                 i++
                 qNum++
             }
-            else{
+            else{       // if done, navigate to EndPage
                 var t =  Intent(this, EndPage::class.java)
                 t.putExtra(passScore,score.toString())
                 startActivity(t)
@@ -139,7 +141,7 @@ class gamePage : AppCompatActivity() {
                 i++
                 qNum++
             }
-            else{
+            else{       // if done, navigate to EndPage
                 var t =  Intent(this, EndPage::class.java)
                 t.putExtra(passScore,score.toString())
                 startActivity(t)

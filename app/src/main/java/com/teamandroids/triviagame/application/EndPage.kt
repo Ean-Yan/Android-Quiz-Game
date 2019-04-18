@@ -9,8 +9,11 @@ import android.widget.Button
 import android.widget.TextView
 
 class EndPage : AppCompatActivity() {
+
     private var current = "0"
-    var previous = "type"
+
+    /* var previous = "type" */
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_end_page)
@@ -33,11 +36,12 @@ class EndPage : AppCompatActivity() {
         var score: TextView = findViewById<TextView>(R.id.endScore)
         score.text = current
 
+
         //Return Button
         var returnM: Button = findViewById<Button>(R.id.MenuButton)
         returnM.setOnClickListener {
             var i = Intent(this, MainActivity::class.java)
-            i.putExtra(current, current)
+            i.putExtra("EndToMain", current)    // Continue passScore to MainPage for showing records & achievements
             startActivity(i)
         }
 
@@ -47,7 +51,6 @@ class EndPage : AppCompatActivity() {
             var i = Intent(this, LevelActivity::class.java)
             startActivity(i)
         }
-
         window.attributes=params
     }
 }

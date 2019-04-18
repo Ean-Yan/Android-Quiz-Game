@@ -8,28 +8,27 @@ import android.widget.TextView
 
 class Achievements : AppCompatActivity() {
 
-    private var current = "0"
-    private var current2 = "0"
+    private var score = "0"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_achievement_page)
 
-      // below need to be fixed
 
-//        if(intent.hasExtra("pass")){
-//            current = intent.getStringExtra("pass")
-//        }
-//
-//        var s1: TextView = findViewById<TextView>(R.id.scoreHighest)
-//        s1.text = current
+        if(intent.hasExtra("MainToAchievements")){
+            score = intent.getStringExtra("MainToAchievements")
+        }
+
+
+        var scoreHighestText: TextView = findViewById<TextView>(R.id.scoreHighest)
+        scoreHighestText.text = score
 
 
         // button back to homePage
         val backHome : Button =  findViewById<Button>(R.id.buttonHome)
         backHome.setOnClickListener {
             var i =  Intent(this, MainActivity::class.java)
-            i.putExtra(current, current)
+           // i.putExtra(current, current)
             startActivity(i)
         }
 

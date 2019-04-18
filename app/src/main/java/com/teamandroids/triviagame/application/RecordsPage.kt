@@ -12,41 +12,48 @@ import android.widget.TextView
 
 class RecordsPage : AppCompatActivity() {
 
-    private var current = "0"
+    private var score = "0"
+    private var test3 = "pass3...Ok"
+   // private var test2 = "pass2...ok"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scores_page)
 
-        // using intent
-        if(intent.hasExtra("pass")){
-            current = intent.getStringExtra("pass")
+        /* using intent */
+        if(intent.hasExtra("MainToRecords")){
+            score = intent.getStringExtra("MainToRecords")
+
         }
 
-        var s: TextView = findViewById<TextView>(R.id.textScore)
-        s.text = current
 
-//        var t: TextView = findViewById(R.id.textTime)
-//        t.text = t1;
+        var totalScoreText: TextView = findViewById<TextView>(R.id.totalScore)
+        totalScoreText.text = score
+
+        var lastScoreText: TextView = findViewById(R.id.lastScore)
+        lastScoreText.text = score
 
 
-
-        // button navigate to AchievementsPage
+        /* button navigate to AchievementsPage */
         val achievements : Button = findViewById<Button>(R.id.buttonAch)
         achievements.setOnClickListener {
             var i =  Intent(this, Achievements::class.java)
             startActivity(i)
         }
 
-        // button back to homePage
+
+        /* button back to homePage */
         val backHome : Button =  findViewById<Button>(R.id.buttonHome)
         backHome.setOnClickListener {
+
             var i =  Intent(this, MainActivity::class.java)
-            i.putExtra(current, current)
+
+           // i.putExtra(current, current)
+
             startActivity(i)
         }
 
-        // button to new Game
+        /* button to new Game */
         val resumeGame: Button = findViewById<Button>(R.id.buttonGame)
         resumeGame.setOnClickListener {
             var i =  Intent(this, LevelActivity::class.java)
