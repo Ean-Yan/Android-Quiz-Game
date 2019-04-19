@@ -15,7 +15,7 @@ tools:context=".gamePage">
         android:text="Highest Score"
         android:layout_width="330dp"
         android:layout_height="90dp"
-        android:id="@+id/timeView" android:background="@color/colorPrimary"
+        android:id="@+id/highScoreView" android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,8 +29,8 @@ tools:context=".gamePage">
 <TextView
         android:text="Correct answer total"
         android:layout_width="330dp"
-        android:layout_height="105dp"
-        android:id="@+id/AchievementsView" android:background="@color/colorPrimary"
+        android:layout_height="90dp"
+        android:id="@+id/AnswersView" android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -45,20 +45,17 @@ tools:context=".gamePage">
         android:gravity="center"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:id="@+id/rowScore"
+        android:id="@+id/correctTotal"
         android:fontFamily="@font/aldrich" android:textSize="24sp"
         android:textColor="@android:color/background_light" android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="350dp"
         android:layout_marginEnd="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/scoreView"
 />
-
-
 <TextView
-        android:text="000"
+        android:text="0"
         android:gravity="center"
         android:layout_width="100dp"
         android:layout_height="50dp"
@@ -66,8 +63,8 @@ tools:context=".gamePage">
         android:fontFamily="@font/aldrich" android:textSize="24sp"
         android:textColor="@android:color/background_light" android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="@id/rowScore"
-        android:layout_marginEnd="4dp"
+        app:layout_constraintStart_toStartOf="@id/correctTotal"
+        android:layout_marginEnd="0dp"
         android:layout_marginTop="250dp"
 />
 

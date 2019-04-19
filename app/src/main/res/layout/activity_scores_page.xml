@@ -55,6 +55,7 @@
             android:fontFamily="@font/aldrich" android:textSize="27sp"
             android:textColor="@android:color/background_light"
     />
+
     <TextView
             android:text="0"
             android:gravity="center"
@@ -70,6 +71,7 @@
             android:layout_marginEnd="0dp"
             app:layout_constraintBottom_toTopOf="@+id/totalScoreView"
     />
+
     <TextView
             android:text="0"
             android:gravity="center"
@@ -84,31 +86,16 @@
             android:layout_marginTop="250dp"
     />
 
-    <Button
-            android:text="Achievements"
-            android:layout_width="240dp"
-            android:layout_height="45dp"
-            android:id="@+id/buttonAch"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="355dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:textSize="18sp"
-            android:textColor="@android:color/holo_red_dark"
-    />
 
     <Button
-        android:text="Back Home"
-        android:layout_width="240dp"
+        android:text="Back Home Now!"
+        android:layout_width="260dp"
         android:layout_height="50dp"
         android:id="@+id/buttonHome"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="490dp"
+        android:layout_marginTop="355dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -118,13 +105,13 @@
 
     <Button
             android:text="New Game"
-            android:layout_width="240dp"
+            android:layout_width="260dp"
             android:layout_height="50dp"
             android:id="@+id/buttonGame"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="430dp"
+            android:layout_marginTop="435dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"

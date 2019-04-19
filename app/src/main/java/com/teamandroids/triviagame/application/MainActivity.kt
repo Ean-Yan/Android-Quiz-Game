@@ -10,62 +10,79 @@ import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
-    private var score = "0"
+
     private var ifPassRecords = 0
     private var ifPassAchievements = 0
     private lateinit var media : MediaPlayer
-    private var highestScore = "highest"
-    private var soundOn = true
+    var soundOn = true
+    private var thisScore = "0"
+    private var baseScore ="0"
+    private var highestScore = "0"
+    private var correctCount = "0"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if(intent.hasExtra("0")){
-            highestScore = intent.getStringExtra("0")
+        if(intent.hasExtra("baseScore")){
+            baseScore = intent.getStringExtra("baseScore")
+        }
+        if(intent.hasExtra("thisScore")){
+            thisScore = intent.getStringExtra("thisScore")
+        }
+        if(intent.hasExtra("HighestScore")){
+            highestScore = intent.getStringExtra("HighestScore")
+        }
+        if(intent.hasExtra("correctCount")){
+            correctCount = intent.getStringExtra("correctCount")
         }
 
-        if(intent.hasExtra("EndToMain")){       /* if passed by EndPage  */
-            score = intent.getStringExtra("EndToMain")
-            ifPassRecords = 1
-            ifPassAchievements = 1
-        }
+
 
         //Button initialization
         val gameOn : Button = findViewById<Button>(R.id.PlayButton)
         gameOn.setOnClickListener {
-            var i =  Intent(this, LevelActivity::class.java)
+            val i =  Intent(this, LevelActivity::class.java)
+            i.putExtra("baseScore", baseScore)
+            i.putExtra("thisScore", thisScore)
+            i.putExtra("HighestScore", highestScore)
+            i.putExtra("correctCount", correctCount)
             startActivity(i)
         }
         val rdm: Button = findViewById(R.id.buttonRandom)
         rdm.setOnClickListener {
-            var i = Intent(this, gamePage::class.java)
+            val i = Intent(this, gamePage::class.java)
+            i.putExtra("baseScore", baseScore)
+            i.putExtra("thisScore", thisScore)
+            i.putExtra("HighestScore", highestScore)
+            i.putExtra("correctCount", correctCount)
             startActivity(i)
         }
         val settings : Button = findViewById(R.id.Settings)
         settings.setOnClickListener {
-            var i = Intent(this, SettingsPage::class.java)
+            val i = Intent(this, SettingsPage::class.java)
+            i.putExtra("baseScore", baseScore)
+            i.putExtra("thisScore", thisScore)
+            i.putExtra("HighestScore", highestScore)
+            i.putExtra("correctCount", correctCount)
             startActivity(i)
         }
         val records : Button = findViewById<Button>(R.id.buttonRecord)
         records.setOnClickListener {
-            var i = Intent(this, RecordsPage::class.java)
-
-            if(ifPassRecords==1){
-                i.putExtra("MainToRecords", score)      /* pass score to Records */
-            }
-
+            val i = Intent(this, RecordsPage::class.java)
+            i.putExtra("baseScore", baseScore)
+            i.putExtra("thisScore", thisScore)
+            i.putExtra("HighestScore", highestScore)
+            i.putExtra("correctCount", correctCount)
             startActivity(i)
         }
-
         val achievements : Button = findViewById<Button>(R.id.buttonAchievements)
         achievements.setOnClickListener {
-            var i = Intent(this, Achievements::class.java)
-
-            if(ifPassAchievements==1){
-                i.putExtra("MainToAchievements", score)      /* pass score to Achievements */
-            }
-
+            val i = Intent(this, Achievements::class.java)
+            i.putExtra("baseScore", baseScore)
+            i.putExtra("thisScore", thisScore)
+            i.putExtra("HighestScore", highestScore)
+            i.putExtra("correctCount", correctCount)
             startActivity(i)
         }
 

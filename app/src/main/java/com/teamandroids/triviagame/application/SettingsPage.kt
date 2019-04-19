@@ -10,25 +10,50 @@ import android.widget.SeekBar
 
 class SettingsPage : Activity() {
 
-    // val science : Button = findViewById<Button>(R.id.ScienceButton)
+    private var thisScore = "0"
+    private var baseScore = "0"
+    private var highestScore = "0"
+    private var correctCount = "0"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings_page)
-        val achievements : Button = findViewById<Button>(R.id.achievements)
+
+        if(intent.hasExtra("baseScore")){
+            baseScore = intent.getStringExtra("baseScore")
+        }
+        if(intent.hasExtra("thisScore")){
+            thisScore = intent.getStringExtra("thisScore")
+        }
+        if(intent.hasExtra("HighestScore")){
+            highestScore = intent.getStringExtra("HighestScore")
+        }
+        if(intent.hasExtra("correctCount")){
+            correctCount = intent.getStringExtra("correctCount")
+        }
 
         val muteSounds : Button = findViewById<Button>(R.id.muteSounds)
 
         val muteMusic : Button = findViewById<Button>(R.id.muteMusic)
 
         val home : Button = findViewById<Button>(R.id.home)
+
         home.setOnClickListener {
-            var i =  Intent(this, MainActivity::class.java)
+            val i =  Intent(this, MainActivity::class.java)
+            i.putExtra("baseScore", baseScore)
+            i.putExtra("thisScore", thisScore)
+            i.putExtra("HighestScore", highestScore)
+            i.putExtra("correctCount", correctCount)
             startActivity(i)
         }
 
         val resume: Button = findViewById<Button>(R.id.resume)
         resume.setOnClickListener {
-            var i =  Intent(this, gamePage::class.java)
+            val i =  Intent(this, gamePage::class.java)
+            i.putExtra("baseScore", baseScore)
+            i.putExtra("thisScore", thisScore)
+            i.putExtra("HighestScore", highestScore)
+            i.putExtra("correctCount", correctCount)
             startActivity(i)
         }
 

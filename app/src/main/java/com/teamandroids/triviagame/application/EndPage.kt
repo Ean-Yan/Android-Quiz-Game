@@ -10,10 +10,12 @@ import android.widget.TextView
 
 class EndPage : AppCompatActivity() {
 
-    private var current = "0"
+    private var baseScore = "0"
+    private var thisScore = "0"
+    private var highestScore = "0"
+    private var correctCount = "0"
 
     /* var previous = "type" */
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_end_page)
@@ -26,30 +28,49 @@ class EndPage : AppCompatActivity() {
         params.x = 0
         params.y = -20
 
-        //Pass variables through intent
+        //receive score via "pass"
         if(intent.hasExtra("pass")){
-            current = intent.getStringExtra("pass")
-            //previous = intent.getStringExtra("QuestionType")
+            thisScore = intent.getStringExtra("pass")
+        }
+        //receive baseScore via "baseScore"
+        if(intent.hasExtra("baseScore")){
+            baseScore = intent.getStringExtra("baseScore")
+        }
+        //receive highest Score
+        if(intent.hasExtra("HighestScore")){
+            highestScore = intent.getStringExtra("HighestScore")
+        }
+        // receive correct Counts
+        if(intent.hasExtra("correctCount")){
+            correctCount = intent.getStringExtra("correctCount")
         }
 
-        //Show score
+        //Show this score
         var score: TextView = findViewById<TextView>(R.id.endScore)
-        score.text = current
+        score.text = thisScore
 
 
         //Return Button
         var returnM: Button = findViewById<Button>(R.id.MenuButton)
         returnM.setOnClickListener {
             var i = Intent(this, MainActivity::class.java)
-            i.putExtra("EndToMain", current)    // Continue passScore to MainPage for showing records & achievements
-            startActivity(i)
+            i.putExtra("baseScore", baseScore)
+            i.putExtra("thisScore", thisScore)
+            i.putExtra("HighestScore", highestScore)
+            i.putExtra("correctCount", correctCount)
+            startActivity(i)  // Main Page holds baseScore and thisScore
         }
 
         //Retry Button
         var retryB: Button = findViewById(R.id.RetryButton)
         retryB.setOnClickListener {
             var i = Intent(this, LevelActivity::class.java)
-            startActivity(i)
+
+            i.putExtra("baseScore", baseScore)
+            i.putExtra("thisScore", thisScore)
+            i.putExtra("HighestScore", highestScore)
+            i.putExtra("correctCount", correctCount)
+            startActivity(i)  // Level Activity holds baseScore and thisScore
         }
         window.attributes=params
     }

@@ -79,7 +79,7 @@
             app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="24dp" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0"/>
     <TextView
-            android:text="00:00"
+            android:text="Apr 19"
             android:gravity="center"
             android:layout_width="100dp"
             android:layout_height="50dp"
