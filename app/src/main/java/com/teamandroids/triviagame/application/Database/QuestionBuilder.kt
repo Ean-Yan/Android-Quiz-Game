@@ -5,7 +5,7 @@ class QuestionBuilder {
 
      fun build(): MutableList<Question> {
 
-            return mutableListOf<Question>(
+            return mutableListOf<Question>( //The questions themselves
                     Question(
                             "Science",
                             1,
@@ -891,7 +891,7 @@ class QuestionBuilder {
             )
     }
 
-        fun getQuestionList (r: String): List<Question> {
+        fun getQuestionList (r: String): List<Question> { //get questions based on input received
             if(r=="Science"){
                 return build().filter {
                     question -> question.QType=="Science" && !question.wasUsed
@@ -912,7 +912,7 @@ class QuestionBuilder {
         }
 
 
-        fun returnRandom(): Question{
+        fun returnRandom(): Question{ //Get questions randomly
                return build()[((Math.random()*80).toInt())]
         }
 }

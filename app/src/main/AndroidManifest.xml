@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".EndPage">
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -17,9 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".LevelActivity"></activity>
-        <activity android:name=".gamePage"></activity>
-        <activity android:name=".SettingsPage"></activity>
+        <activity android:name=".LevelActivity"/>
+        <activity android:name=".gamePage"/>
+        <activity android:name=".SettingsPage"/>
+        <activity android:name=".RecordsPage"/>
+        <activity android:name=".Achievements"/>
+
     </application>
 
 </manifest>
