@@ -436,6 +436,17 @@ class QuestionBuilder {
                             false
                     ),
                     Question(
+                            "Politics",
+                            1,
+                            "Whose the previous president of U.K?",
+                            "Trump",
+                            "Mr Bean",
+                            "Theresa",
+                            "Brasier",
+                            2,
+                            false
+                    ),
+                    Question(
                             "Sports",
                             1,
                             "What color jacket is given to the winner of the Masters Tournament?",

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.Gravity
 import android.widget.Button
-import com.teamandroids.triviagame.application.gamePage
 
 class LevelActivity : Activity() {
 
@@ -49,15 +48,12 @@ class LevelActivity : Activity() {
                 i.putExtra(type, "Sports")
                 startActivity(i)
             }
-        val history : Button = findViewById<Button>(R.id.HistoryButton)
+        val history : Button = findViewById<Button>(R.id.RetryButton)
             history.setOnClickListener {
                 var i = Intent (this, gamePage::class.java)
                 i.putExtra(type, "History")
                 startActivity(i)
             }
-
-
-
         window.attributes=params
     }
 }

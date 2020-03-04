@@ -10,41 +10,44 @@ import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
     private lateinit var media : MediaPlayer
+    private var highestScore = "highest"
     private var soundOn = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-/*        val gameOn : Button = findViewById(R.id.PlayButton)
-        gameOn.setOnClickListener {
-            val toQuestionPage = Intent(this, gamePage :: class.java)
-            startActivity(toQuestionPage)
-*/
+        if(intent.hasExtra("0")){
+            highestScore = intent.getStringExtra("0")
+        }
+
+        //Button initialization
         val gameOn : Button = findViewById<Button>(R.id.PlayButton)
         gameOn.setOnClickListener {
             var i =  Intent(this, LevelActivity::class.java)
             startActivity(i)
         }
-
         val rdm: Button = findViewById(R.id.buttonRandom)
         rdm.setOnClickListener {
             var i = Intent(this,gamePage::class.java)
             startActivity(i)
         }
-
         val settings : Button = findViewById(R.id.Settings)
         settings.setOnClickListener {
             var i = Intent(this, SettingsPage::class.java)
             startActivity(i)
         }
+        val highScore : Button = findViewById<Button>(R.id.buttonRecord)
+//        highScore.setOnClickListener {
+//            var i = Intent(this, SettingsPage::class.java)
+//            i.putExtra(highestScore, highestScore)
+//            startActivity(i)
+//        }
 
         //Unsolved Media Switch
-        media = MediaPlayer.create(this, R.raw.homepage)
-        val music = findViewById<Button>(R.id.soundButton) as Button
-        media.start()
-
-
+//        media = MediaPlayer.create(this, R.raw.homepage)
+//        val music = findViewById<Button>(R.id.soundButton) as Button
+//        media.start()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
